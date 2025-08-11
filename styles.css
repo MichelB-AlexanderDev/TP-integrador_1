@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: whitesmoke;
   color: #333;
@@ -18,8 +22,8 @@ body {
 
 .navigation {
   position: fixed;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .navigation-section {
@@ -219,9 +223,8 @@ figure {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  min-height: 100vh;
   height: auto;
+  width: 100%;
   padding: 40px 20px;
   box-sizing: border-box;
   background-color: #1f1346;
@@ -344,7 +347,6 @@ hr {
 
 /* Apartado responsive */
 
-
 @media screen and (max-width: 1024px) {
   .nav-left .nav-left__options,
   .nav-right {
@@ -418,17 +420,17 @@ hr {
   }
 
   @media screen and (max-width: 768px) {
-  .nav-left .nav-left__options,
-  .nav-right {
-    display: none;
-  }
-
-  .nav-right__menu-btn {
-    display: flex;
-  }
   .homepage {
     flex-direction: column;
     align-items: center;
+  }
+  
+  .h-header h1 {
+    font-size: 32px;
+  }
+
+  .bttns {
+    margin-right: 50px;
   }
 
   .hero {
@@ -439,7 +441,7 @@ hr {
   .cards-container {
     flex-direction: column;
     align-items: center;
-    width: 100vh;
+    width: 100%;
   }
   .card {
     width: 300px;
